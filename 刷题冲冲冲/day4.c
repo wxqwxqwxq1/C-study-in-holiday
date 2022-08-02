@@ -46,16 +46,33 @@
 //371 = 3^3 + 7^3 + 1^3。
 //407 = 4^3 + 0^3 + 7^3。
 //*/
-int main()
-{
-	int i = 1, j = 0, k = 0;
-	do
-	{
-		printf("%d",)
-	}
-}
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 100; i <= 999; i++)
+//	{
+//		int a = i / 100;
+//		int b = i % 100 / 10;
+//		int c = i % 10;
+//		if (a* a* a + b * b * b + c * c * c ==i) printf("%d ", i);
+//	}
+//}
 //3.
 //求Sn = a + aa + aaa + aaaa + aaaaa的前5项之和，其中a是一个数字，
 //例如：2 + 22 + 222 + 2222 + 22222
-//
-//
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int a = 0;
+	int sn = 0;
+	scanf("%d", &a);
+	for (int i = 1,j=a; i < 5; i++)
+	{
+		sn += j;
+		j = j * 10 + a;
+		printf("%d ", j);
+	}
+	printf("\n%d", sn);
+	return 0;
+}
