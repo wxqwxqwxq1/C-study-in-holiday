@@ -103,3 +103,38 @@
 //	}
 //	return 0;
 //}
+//输入什么输出什么
+//#include <stdio.h>
+//int main()
+//{
+//	char ch = '0';
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//		putchar('\n');
+//	}
+//}
+//自动关机
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
+	char input[20] = { 0 };
+	system("shutdown -s -t 60");
+	//msg% username% / w / v 这是一个提示框
+again:
+	system("msg %username% /w /v 请注意，你的电脑将在一分钟后关机，如果输入：我是猪，就取消关机");
+	printf("请输入>：");
+	scanf("%s", input);
+	if (strcmp(input, "我是猪") == 0)
+	{
+		system("shutdown -a");
+		system("msg %username% /w /v 你是猪，哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈!!!!!!!!");
+		system("msg %username% /w /v 电脑已取消关机");
+	}
+	else goto again;
+}
