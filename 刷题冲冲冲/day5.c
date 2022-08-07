@@ -12,6 +12,56 @@
 //如果接收的是大写字符，就输出对应的小写字符，
 //如果是数字不输出。
 
+////1.完成猜数字游戏。
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#include<stdlib.h>
+//#include <time.h>
+//
+//void game()
+//{
+//	int rand_number = 0;
+//	int guess = 0;
+//	//生成一个随机数
+//	srand((unsigned int)time(NULL));
+//	rand_number = rand() % 100 + 1;
+//	printf("%d\n", rand_number);
+//	while (1)
+//	{
+//		printf("请输入你猜的数>: ");
+//		scanf("%d", &guess);
+//		if (rand_number > guess) printf("猜小了\n");
+//		else if (rand_number < guess) printf("猜大了\n");
+//		else {
+//			printf("猜对了\n");
+//			break;
+//		}
+//		break;
+//	}
+//}
+//
+//int main()
+//{
+//	printf("#################################\n");
+//	printf("####1.退出游戏   2.开始游戏######\n");
+//	printf("#################################\n");
+//	while (1)
+//	{
+//		int choose = 0;
+//		printf("请选择>:");
+//		scanf("%d", &choose);
+//		switch (choose) 
+//		{
+//		case 2: {game(); break;
+//		}
+//		case 1:goto end;
+//		default:break;
+//		}
+//	}
+//end:
+//	return 0;
+//}
+
 
 //生成随机数rand()函数的使用
 //#include <stdlib.h>
@@ -145,4 +195,100 @@
 //	{
 //		printf("hehe\n");
 //	}
+//}
+//判断素数
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#include <math.h>
+//
+////int is_prime(int x)
+////{
+////	int answer = 1;
+////	for (int i = 2; i <= sqrt(x); i++)
+////	{
+////		if (x % i == 0)
+////		{
+////			answer = 0;
+////			break;
+////		}
+////	}
+////	return answer;
+////}
+//int is_prime(int x) {
+//	int i = 2;
+//	for (; i <= sqrt(x); i++)
+//	{
+//		if (x % i == 0) return 0;
+//	}
+//	return 1;
+//}
+//int main()
+//{
+//	int input;
+//	scanf("%d", &input);
+//	if (is_prime(input))
+//		printf("是素数\n");
+//	else
+//		printf("不是素数\n");
+//	return 0;
+//} 
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//
+//int is_leap_year(int x)
+//{
+////	if (x % 400 == 0) return 1;
+////	else if (x % 100 == 0) return 0;
+////	else if (x % 4 == 0) return 1;
+////	else return 0;
+//	if ((x % 4 == 0 && x % 100 != 0) || (x % 400 == 0))
+//		return 1;
+//	else return 0;
+//}
+//int main()
+//{
+//	int year = 0;
+//	for (year = 1000; year <= 2000; year++)
+//	{
+//		if (is_leap_year(year)) printf("%d ", year);
+//	}
+//}
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include <string.h>
+//int binary_search(int array[], int x,int y)
+//{
+//	printf("%d ", array[0]);
+//	int left = 0, right = y;
+//	int middle = (left + right) / 2;
+//	while ((x != array[middle])&&(left<= y&&(right>=0)))
+//	{
+//		if (x > array[middle]) left = middle;
+//		else right = middle; 
+//		middle = (left + right) / 2;
+//	}
+//	if (x == array[middle]) return middle+1;
+//	else return -1;
+//}
+//int binary_search(int array[], int x, int y)
+//{
+//	int left = 0, right = y - 1;
+//	while (left <= right) {
+//	int middle = (left + right) / 2;
+//	if (array[middle] > x) right = middle - 1;
+//	else if (array[middle] < x) left = middle + 1;
+//	else if (array[middle] == x) return middle;
+//	}
+//	return -1;
+//}
+//int main()
+//{
+//	int y = 0;
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10,'/0'};
+//	printf("%p\n", arr);
+//	int k = 1;
+//	//strlen(arr);//求字符串长度
+//	y = sizeof(arr) / sizeof(arr[0]);//求数组长度
+//	printf("下标为%d\n",binary_search(arr, k,y));
 //}
