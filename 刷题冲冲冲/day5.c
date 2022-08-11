@@ -12,6 +12,92 @@
 //如果接收的是大写字符，就输出对应的小写字符，
 //如果是数字不输出。
 
+//4.编写一个程序，可以一直接收键盘字符，
+//如果是小写字符就输出对应的大写字符，
+//如果接收的是大写字符，就输出对应的小写字符，
+//如果是数字不输出。
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	char ch = '0';
+	while ((ch = getchar()) != EOF)
+	{
+		//if ('a'<=ch&&ch<='z') putchar(ch - 32);
+		//else if ('A' <= ch&&ch<='Z') putchar(ch +32);
+		if (97<=ch&&ch<=122) putchar(ch - 32);
+		else if (65 <= ch&&ch<=90) putchar(ch +32);
+		putchar('\n');
+	}
+	return 0;
+}
+ 
+//菲波那切数列
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int count = 0;
+//int Fib(int n)
+//{
+//	if (n == 3) count++;
+//	if (n <= 2) return 1;
+//	else return Fib(n - 1) + Fib(n - 2);
+//}
+//int Fib2(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 0;
+//	while (n>2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//
+//int Fib3(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 2;
+//	while (n>3)
+//	{
+//		a = b + c;
+//		b = a + c;
+//		c = a + b;
+//		n -= 3;
+//	}
+//	if (n == 3) return c;
+//	if (n == 2) return b;
+//	if (n == 1) return a;
+//}
+//
+//int main()
+//{
+//	int input = 0;
+//	int result = 0;
+//	scanf("%d", &input);
+//	result = Fib3(input);
+//	printf("%d\n", result);
+//	printf("%d", count);
+//	return 0;
+//}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int main()
+//{
+//	char  arr[] = "Qsqsqas";
+//	char* p = arr;
+//	printf("%c", *p);
+//	printf("%p", arr);
+//	p++;
+//	printf("%c", *p);
+//	return 0;
+//}
+
 ////1.完成猜数字游戏。
 //#define _CRT_SECURE_NO_WARNINGS 1
 //#include <stdio.h>
@@ -25,7 +111,7 @@
 //	//生成一个随机数
 //	srand((unsigned int)time(NULL));
 //	rand_number = rand() % 100 + 1;
-//	printf("%d\n", rand_number);
+//	//printf("%d\n", rand_number);
 //	while (1)
 //	{
 //		printf("请输入你猜的数>: ");
@@ -36,7 +122,7 @@
 //			printf("猜对了\n");
 //			break;
 //		}
-//		break;
+//		/*break;*/
 //	}
 //}
 //
@@ -291,4 +377,16 @@
 //	//strlen(arr);//求字符串长度
 //	y = sizeof(arr) / sizeof(arr[0]);//求数组长度
 //	printf("下标为%d\n",binary_search(arr, k,y));
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char c = 1;
+//	+c;
+//	!c;
+//	printf("%u\n", sizeof(c));
+//	printf("%d\n", sizeof(+c));
+//	printf("%d\n", sizeof(!c));
+//
 //}
