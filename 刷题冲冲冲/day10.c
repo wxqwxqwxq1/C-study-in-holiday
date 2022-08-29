@@ -100,9 +100,25 @@
 //输出例子 : 7
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
+int different_bits(unsigned int x,unsigned int y)
+{
+	int count = 0;
+	unsigned int tmp = x ^ y;//相同为0，不同为1
+	//求一下tmp中1的个数
+	do {
+		if (tmp & 1)
+			count++;
+		tmp = tmp >> 1;
+	} while (tmp);
+	return count;
+}
 int main()
 {
-
+	int x = 0;
+	int y = 0;
+	scanf("%d %d", &x, &y);
+	printf("%d", different_bits(x, y));
+	return 0;
 }
 //5.写博客总结C语言操作符，博客链接发给我，并分享到群里。
 //
