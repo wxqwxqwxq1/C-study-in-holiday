@@ -67,20 +67,43 @@
 //}
 
 //3. 输出一个整数的每一位。
-#define _CRT_SECURE_NO_WARNINGS 1
-#include <stdio.h>
-#include <stdio.h>
-int main()
-{
-	return 0;
-}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//
+//void printf_every(int x)
+//{
+//	//123
+//	//12+3
+//	//1+2+3
+//	if (x <10)
+//	{
+//		printf("%d ", x);
+//	}
+//	else
+//	{
+//		printf_every(x / 10);
+//		printf("%d ", x % 10);
+//	}
+//}
+//int main()
+//{
+//	int input = 0;
+//	scanf("%d", &input);
+//	printf_every(input);
+//	return 0;
+//}
 //4.编程实现：
 //两个int（32位）整数m和n的二进制表达中，
 //有多少个位(bit)不同？
 //输入例子 :
 //1999 2299
 //输出例子 : 7
-//
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+
+}
 //5.写博客总结C语言操作符，博客链接发给我，并分享到群里。
 //
 //
