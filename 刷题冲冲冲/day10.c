@@ -32,12 +32,48 @@
 //}
 //2.获取一个数二进制序列中所有的偶数位和奇数位，
 //分别输出二进制序列。
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#include <stdio.h>
+//void find_odd(unsigned int x)
+//{
+//	int i = 0;
+//	for (i = 31; i >= 0; i = i - 2)
+//	{
+//		//将x右移i位然后&1，得到第i+1位的值
+//		printf("第%d位:", i );
+//		printf("%d\n", (x>>i) & 1);
+//	}	
+//}
+//void find_even(unsigned int x)
+//{
+//	int i = 0;
+//	for (i = 30; i >= 0; i = i - 2)
+//	{
+//		//将x右移i位然后&1，得到第i+1位的值
+//		printf("第%d位:", i);
+//		printf("%d\n", (x >> i) & 1);
+//	}
+//}
+//int main()
+//{
+//	// 0000 1111
+//	//^0000 0000           相同为0，相异为1
+//	int input = 0;
+//	scanf("%d", &input);
+//	find_odd(input);  //奇数位
+//	find_even(input);  //偶数位
+//	return 0;
+//}
+
+//3. 输出一个整数的每一位。
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdio.h>
-
-//3. 输出一个整数的每一位。
-//
+int main()
+{
+	return 0;
+}
 //4.编程实现：
 //两个int（32位）整数m和n的二进制表达中，
 //有多少个位(bit)不同？
