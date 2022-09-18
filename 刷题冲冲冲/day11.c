@@ -116,13 +116,46 @@
 //}
 // 
 //3.在屏幕上打印杨辉三角。
-//1
-//1 1
-//1 2 1
-//1 3 3 1
-//1 4 6 4 1
-// 
-// 
+//  0 1 2 3 4
+//0 1
+//1 1 1
+//2 1 2 1
+//3 1 3 3 1
+//4 1 4 6 4 1
+// ...
+//1 上一列的这个元素+上一列这个元素旁边的元素  1
+#define _CRT_SECURE_NO_WARNINGS 1
+#define line 20
+#include<stdio.h>
+int main()
+{
+	int YangHui[line][line] = { 0 };
+	//初始化第一列和最后一列为1
+	int i = 0, j = 0;
+	for (i = 0; i < line; i++)
+	{
+		YangHui[i][0] = 1;
+	}
+	for (i=1,j = 1; j < line; i++,j++)
+	{
+		YangHui[i][j] = 1;
+	}
+	for (i = 2; i < line; i++)
+	{
+		for (j = 1; j < i; j++)
+			YangHui[i][j] = YangHui[i - 1][j] + YangHui[i - 1][j - 1];
+	}
+	//打印
+	for (i = 1; i <= line; i++)
+	{
+		for (j = 1; j <= i; j++)
+			printf("%-5d ", YangHui[i-1][j-1]);
+		printf("\n");
+	}
+
+
+	return 0;
+}
 // 
 // wrong!!
 //#define _CRT_SECURE_NO_WARNINGS 1
